@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mememania</title>
+    <title>Web de Criptomonedas Meme</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,12 +29,12 @@
         nav {
             background-color: #f0f0f0;
             padding: 10px 20px;
+            text-align: center;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            text-align: center;
         }
         nav ul li {
             display: inline;
@@ -50,6 +50,19 @@
             color: #666;
             line-height: 1.6;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -61,32 +74,39 @@
 
     <nav>
         <ul>
-            <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
-            <li><a href="#token">Token</a></li>
-            <li><a href="#equipo">Equipo</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><button onclick="scrollToSection('sobre_nosotros')">Sobre nosotros</button></li>
+            <li><button onclick="scrollToSection('token')">Token</button></li>
+            <li><button onclick="scrollToSection('equipo')">Equipo</button></li>
+            <li><button onclick="scrollToSection('contacto')">Contacto</button></li>
         </ul>
     </nav>
 
     <section id="sobre_nosotros">
         <h2>Sobre nosotros</h2>
-        <p>Una breve descripción de la empresa y su visión en el espacio de las criptomonedas meme.</p>
+        <p>Somos una comunidad apasionada por los memes y la tecnología blockchain. Nuestra misión es proporcionar un espacio seguro y divertido para que los entusiastas de los memes participen en el emocionante mundo de las criptomonedas meme.</p>
     </section>
 
     <section id="token">
         <h2>Token</h2>
-        <p>Información sobre el token de criptomonedas meme, incluyendo su propósito, características y cómo adquirirlo.</p>
+        <p>Nuestro token de criptomoneda meme, Mememania (MM), es una representación de nuestra comunidad y valores. Con MM, los usuarios pueden participar en actividades como votaciones, intercambio de memes y recompensas por participación.</p>
     </section>
 
     <section id="equipo">
         <h2>Equipo</h2>
-        <p>Presentación del equipo detrás del proyecto, incluyendo sus roles y experiencias relevantes.</p>
+        <p>Nuestro equipo está formado por expertos en tecnología blockchain, desarrolladores de software y entusiastas de los memes. Estamos comprometidos a construir una comunidad vibrante y sostenible en el mundo de las criptomonedas meme.</p>
     </section>
 
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>Formulario de contacto o información de contacto para consultas y colaboraciones.</p>
+        <p>¿Tienes preguntas, sugerencias o simplemente quieres saludar? ¡Contáctanos! Estamos disponibles en correo electrónico, redes sociales y nuestro foro comunitario.</p>
     </section>
 
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
+
