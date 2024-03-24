@@ -214,19 +214,42 @@ return percentage + "%";
 	
 </section>
 
-    <section id="memes">
-        <h2>Memes</h2>
-        <div class="meme-gallery">
-            <img src="images/meme1.jpeg" alt="Meme 1">
-            <img src="images/meme2.jpeg" alt="Meme 2">
-            <img src="images/meme3.jpeg" alt="Meme 3">
-			<img src="images/meme4.jpeg" alt="Meme 4">
-            <img src="images/meme5.jpeg" alt="Meme 5">
-            <img src="images/meme6.jpeg" alt="Meme 6">
-			<img src="images/meme7.jpeg" alt="Meme 7">
-            <!-- Agrega más imágenes de memes según sea necesario -->
-        </div>
-    </section>
+<section id="memes">
+    <h2>Memes</h2>
+    <div class="meme-gallery">
+        <img src="images/meme1.jpeg" alt="Meme 1" onclick="expandImage(this)">
+        <img src="images/meme2.jpeg" alt="Meme 2" onclick="expandImage(this)">
+        <img src="images/meme3.jpeg" alt="Meme 3" onclick="expandImage(this)">
+		<img src="images/meme4.jpeg" alt="Meme 4" onclick="expandImage(this)">
+        <img src="images/meme5.jpeg" alt="Meme 5" onclick="expandImage(this)">
+        <img src="images/meme6.jpeg" alt="Meme 6" onclick="expandImage(this)">
+		<img src="images/meme7.jpeg" alt="Meme 7" onclick="expandImage(this)">
+        <!-- Agrega más imágenes de memes según sea necesario -->
+    </div>
+</section>
+
+<script>
+    function expandImage(image) {
+        var expandedImage = document.createElement('img');
+        expandedImage.src = image.src;
+        expandedImage.alt = image.alt;
+        expandedImage.style.maxWidth = '100%';
+        expandedImage.style.maxHeight = '100%';
+        expandedImage.style.position = 'fixed';
+        expandedImage.style.top = '0';
+        expandedImage.style.left = '0';
+        expandedImage.style.right = '0';
+        expandedImage.style.bottom = '0';
+        expandedImage.style.margin = 'auto';
+        expandedImage.style.zIndex = '9999';
+        expandedImage.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        expandedImage.style.cursor = 'zoom-out';
+        expandedImage.onclick = function() {
+            document.body.removeChild(expandedImage);
+        };
+        document.body.appendChild(expandedImage);
+    }
+</script>
 
     <section id="about_us">
         <h2>Road Map</h2>
