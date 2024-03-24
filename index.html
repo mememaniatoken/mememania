@@ -131,17 +131,63 @@
         <h2>Token</h2>
         <p>Our meme cryptocurrency token, called MemeMAnia (MMM), is a digital asset designed to facilitate the exchange of memes and community engagement on our platform.</p>
     </section>
+    <section id="tokenomics">
+        <h2>Tokenomics</h2>
+        <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+    </section>
 
-<section id="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-        <li>Total token supply: 1,000,000,000 tokens</li>
-        <li>Transaction fees: 0% for both buying and selling</li>
-        <li>90% of the total supply in circulation</li>
-        <li>10% of the total supply allocated for Centralized Exchanges (CEX)</li>
-    </ul>
-</section> 
- 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('tokenomicsChart').getContext('2d');
+        var tokenomicsChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Circulating Supply', 'CEX Allocation'],
+                datasets: [{
+                    label: 'Tokenomics',
+                    data: [90, 10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: false, // Grafico fijo
+                maintainAspectRatio: true,
+                title: {
+                    display: true,
+                    text: 'Mememania Tokenomics'
+                },
+                legend: {
+                    position: 'right',
+                    labels: {
+                        fontColor: 'black',
+                        boxWidth: 15,
+                        padding: 15
+                    }
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var dataset = data.datasets[tooltipItem.datasetIndex];
+                            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                return previousValue + currentValue;
+                            });
+                            var currentValue = dataset.data[tooltipItem.index];
+                            var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+                            return percentage + "%";
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 
 
  <section id="how_to_buy">
@@ -174,6 +220,7 @@
 
     <section id="about_us">
         <h2>Road Map</h2>
+         
         <p>At the meme cryptocurrency website, we are dedicated to exploring the humorous and economic potential of memes in the cryptocurrency world.</p>
 		    <ol>
         <li>Phase 1: "Such Wow" (Q1 2024)
@@ -206,6 +253,7 @@
         </li>
     </ol>
 </section>
+		
     </section>
 
     <section id="contact" style="background-color: rgba(255, 255, 255, 0.7); padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
