@@ -131,9 +131,15 @@
         <h2>Token</h2>
         <p>Our meme cryptocurrency token, called MemeMAnia (MMM), is a digital asset designed to facilitate the exchange of memes and community engagement on our platform.</p>
     </section>
-    <section id="tokenomics">
+   <section id="tokenomics">
         <h2>Tokenomics</h2>
         <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+        <div class="tokenomics-info">
+            <p>Total token supply: 1,000,000,000 tokens</p>
+            <p>Transaction fees: 0% for both buying and selling</p>
+            <p>90% of the total supply in circulation</p>
+            <p>10% of the total supply allocated for Centralized Exchanges (CEX)</p>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -177,17 +183,17 @@
                         label: function(tooltipItem, data) {
                             var dataset = data.datasets[tooltipItem.datasetIndex];
                             var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                                return previousValue + currentValue;
-                            });
-                            var currentValue = dataset.data[tooltipItem.index];
-                            var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
-                            return percentage + "%";
-                        }
-                    }
-                }
-            }
-        });
-    </script>
+return previousValue + currentValue;
+});
+var currentValue = dataset.data[tooltipItem.index];
+var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+return percentage + "%";
+}
+}
+}
+}
+});
+</script>
 
 
  <section id="how_to_buy">
@@ -277,3 +283,4 @@
     </script>
 </body>
 </html>
+
