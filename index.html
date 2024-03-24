@@ -81,13 +81,33 @@
             padding: 20px 0;
             font-weight: bold; /* Texto en negrita */
         }
+        footer img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2); /* Cambia el tamaño del icono al pasar el ratón */
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="images/logo.jpeg" alt="Logo">
         <h1>Mememania</h1>
-        <div></div>
+        <div class="social-icons">
+            <a href="https://twitter.com/mememania_token"><img src="images/1.webp" alt="Twitter"></a>
+            <a href="#"><img src="images/2.webp" alt="Telegram"></a>
+            <!-- Agrega más enlaces e iconos de redes sociales según sea necesario -->
+        </div>
     </header>
 
     <nav>
@@ -120,8 +140,7 @@
         <h2>Contact</h2>
         <p>Have questions or suggestions? We'd love to hear from you! You can contact us via the following email address: info@cryptomeme.com</p>
     </section>
-
-    <section id="how_to_buy">
+        <section id="how_to_buy">
         <h2>How to Buy</h2>
         <p>Buying Mememania tokens is easy! Simply follow these steps:</p>
         <ol>
@@ -144,6 +163,10 @@
     </section>
 
     <footer>
+        <img src="images/icon1.png" alt="Icon 1">
+        <img src="images/icon2.png" alt="Icon 2">
+        <img src="images/icon3.png" alt="Icon 3">
+        <!-- Agrega más imágenes de iconos según sea necesario -->
         <p>&copy; 2024 Mememania. All rights reserved.</p>
     </footer>
 
