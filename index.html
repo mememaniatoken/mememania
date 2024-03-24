@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web de Criptomonedas Meme</title>
+    <title>Mememania</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url('images/background.jpeg'); /* Background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         header {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.7); /* Transparent header background */
             color: #fff;
             padding: 10px 20px;
             display: flex;
@@ -27,14 +31,14 @@
             text-align: center;
         }
         nav {
-            background-color: #f0f0f0;
+            background-color: rgba(240, 240, 240, 0.7); /* Transparent navigation menu background */
             padding: 10px 20px;
-            text-align: center;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            text-align: center;
         }
         nav ul li {
             display: inline;
@@ -42,6 +46,8 @@
         }
         section {
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent section background */
+            margin: 20px 0;
         }
         h2 {
             color: #333;
@@ -51,54 +57,49 @@
             line-height: 1.6;
         }
         button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
             background-color: #333;
             color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #555;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="images/logo.jpeg" alt="Logo">
-        <h1>Mememania - Token de Criptomoneda Meme</h1>
+        <h1>Mememania</h1>
         <div></div>
     </header>
 
     <nav>
         <ul>
-            <li><button onclick="scrollToSection('sobre_nosotros')">Sobre nosotros</button></li>
+            <li><button onclick="scrollToSection('about_us')">About us</button></li>
             <li><button onclick="scrollToSection('token')">Token</button></li>
-            <li><button onclick="scrollToSection('equipo')">Equipo</button></li>
-            <li><button onclick="scrollToSection('contacto')">Contacto</button></li>
+            <li><button onclick="scrollToSection('team')">Team</button></li>
+            <li><button onclick="scrollToSection('contact')">Contact</button></li>
         </ul>
     </nav>
 
-    <section id="sobre_nosotros">
-        <h2>Sobre nosotros</h2>
-        <p>Somos una comunidad apasionada por los memes y la tecnología blockchain. Nuestra misión es proporcionar un espacio seguro y divertido para que los entusiastas de los memes participen en el emocionante mundo de las criptomonedas meme.</p>
+    <section id="about_us">
+        <h2>About us</h2>
+        <p>At the meme cryptocurrency website, we are dedicated to exploring the humorous and economic potential of memes in the cryptocurrency world.</p>
     </section>
 
     <section id="token">
         <h2>Token</h2>
-        <p>Nuestro token de criptomoneda meme, Mememania (MM), es una representación de nuestra comunidad y valores. Con MM, los usuarios pueden participar en actividades como votaciones, intercambio de memes y recompensas por participación.</p>
+        <p>Our meme cryptocurrency token, called MemeCoin (MMC), is a digital asset designed to facilitate the exchange of memes and community engagement on our platform.</p>
     </section>
 
-    <section id="equipo">
-        <h2>Equipo</h2>
-        <p>Nuestro equipo está formado por expertos en tecnología blockchain, desarrolladores de software y entusiastas de los memes. Estamos comprometidos a construir una comunidad vibrante y sostenible en el mundo de las criptomonedas meme.</p>
+    <section id="team">
+        <h2>Team</h2>
+        <p>Our team consists of cryptocurrency and meme enthusiasts with experience in software development, digital marketing, and finance. We are committed to bringing fun and innovation to the world of decentralized finance.</p>
     </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Tienes preguntas, sugerencias o simplemente quieres saludar? ¡Contáctanos! Estamos disponibles en correo electrónico, redes sociales y nuestro foro comunitario.</p>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Have questions or suggestions? We'd love to hear from you! You can contact us via the following email address: info@cryptomeme.com</p>
     </section>
 
     <script>
