@@ -131,16 +131,12 @@
         <h2>Token</h2>
         <p>Our meme cryptocurrency token, called MemeMAnia (MMM), is a digital asset designed to facilitate the exchange of memes and community engagement on our platform.</p>
     </section>
-   <section id="tokenomics">
-        <h2>Tokenomics</h2>
+<section id="tokenomics" style="text-align: right;">
+    <h2>Tokenomics</h2>
+    <div style="float: right;">
         <canvas id="tokenomicsChart" width="400" height="400"></canvas>
-        <div class="tokenomics-info">
-            <p>Total token supply: 1,000,000,000 tokens</p>
-            <p>Transaction fees: 0% for both buying and selling</p>
-            <p>90% of the total supply in circulation</p>
-            <p>10% of the total supply allocated for Centralized Exchanges (CEX)</p>
-        </div>
-    </section>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -196,6 +192,26 @@ return percentage + "%";
 </script>
 
 
+   <!-- Agrega el iframe de DEXTools aquí -->
+<iframe id="dextswap-aggregator-widget"
+    title="DEXTswap Aggregator"
+    width="400" height="420"
+	align = center
+    src="https://www.dextools.io/widget-aggregator/es/swap/bnb/0xc803443b1860ea117d01c4a94c5f5e46808fcac4"></iframe>
+	<iframe id="dextools-widget"
+    title="DEXTools Trading Chart"
+    align = left
+	width="500" height="400"
+    src="https://www.dextools.io/widget-chart/es/bnb/pe-light/0x0f55cce82e9748c817acd5476b2973dfa9cc4b78?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"></iframe>
+	
+	
+	    <div class="tokenomics-info" style="float: right; max-width: 50%;">
+        <p>Total token supply: 1,000,000,000 tokens</p>
+        <p>Transaction fees: 0% for both buying and selling</p>
+        <p>90% of the total supply in circulation</p>
+        <p>10% of the total supply allocated for Centralized Exchanges (CEX)</p>
+    </div>
+</section>
  <section id="how_to_buy">
     <h2>How to Buy</h2>
     <ol>
