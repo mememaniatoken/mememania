@@ -144,13 +144,14 @@
         var tokenomicsChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Circulating Supply', 'CEX Allocation'],
+                labels: ['Circulating Supply', 'CEX Allocation', 'Marketing'],
                 datasets: [{
                     label: 'Tokenomics',
-                    data: [90, 10],
+                    data: [90, 5, 5],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.7)',
                         'rgba(54, 162, 235, 0.7)',
+						'rgba(188, 162, 235, 0.7)',
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
@@ -209,7 +210,8 @@ return percentage + "%";
         <p>Total token supply: 1,000,000,000 tokens</p>
         <p>Transaction fees: 0% for both buying and selling</p>
         <p>90% of the total supply in circulation</p>
-        <p>10% of the total supply allocated for Centralized Exchanges (CEX)</p>
+        <p>5% of the total supply allocated for Centralized Exchanges (CEX)</p>
+		<p>5% of the total supply allocated for Marketing</p>
     </div>
 </section>
  <section id="how_to_buy">
